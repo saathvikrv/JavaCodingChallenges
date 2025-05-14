@@ -1,13 +1,9 @@
 package org.saathvik;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class Permutations {
 
-    public static void generate(int[] nums, int startPos)
-    {
+    public static void generate(int[] nums, int startPos) {
 
         if(startPos == nums.length) {
             System.out.println(Arrays.toString(nums));
