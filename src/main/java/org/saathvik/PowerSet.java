@@ -1,10 +1,15 @@
 package org.saathvik;
+import java.io.IOException;
 import java.util.Arrays;
 
 public class PowerSet {
     public static void main(String[] args) {
+
+
+        /*
         boolean[] boolList = {false, false, false, false, false, false};
         listSubsets(boolList,0);
+        */
     }
 
     public static void listSubsets(boolean[] keep, int startPos) {
