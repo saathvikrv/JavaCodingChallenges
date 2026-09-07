@@ -1,0 +1,42 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#define TARGET_VAL 7
+#define ARR_SIZE 10
+#define DECLARE_ARRAY std::vector<int> arr = {1, 3, 4, 6, 7, 9, 12, 15, 18, 20}
+#define INIT_VARS int low = 0; int high = ARR_SIZE - 1; int mid = 0; int result = -1;
+#define CALC_MID mid = low + (high - low) / 2
+#define CONDITION_CHECK (low <= high)
+#define FOUND_CHECK (arr[mid] == TARGET_VAL)
+#define GREATER_CHECK (arr[mid] > TARGET_VAL)
+#define UPDATE_LOW low = mid + 1
+#define UPDATE_HIGH high = mid - 1
+#define SET_RESULT result = mid
+#define WHILE_LOOP while(CONDITION_CHECK) {
+#define END_WHILE }
+#define IF_BLOCK if(FOUND_CHECK) { SET_RESULT; break; }
+#define ELSE_IF else if(GREATER_CHECK) { UPDATE_HIGH; }
+#define ELSE else { UPDATE_LOW; }
+#define END_MAIN {return 0;}
+#define PRINT_RESULT \
+    if (result != -1) { \
+        std::cout << "Target found at index: " << result << std::endl; \
+    } else { \
+        std::cout << "Target not found in the array." << std::endl; \
+    }
+
+int main() {
+    DECLARE_ARRAY;
+    INIT_VARS;
+
+    WHILE_LOOP
+        CALC_MID;
+        IF_BLOCK
+        ELSE_IF
+        ELSE
+    END_WHILE
+
+    PRINT_RESULT;
+
+    END_MAIN;
+}
